@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практическое задание 5.3 Работа с панелью навигации</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-bottom: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Основное содержимое страницы</h1>
+                <p>Прокрутите страницу вниз, чтобы увидеть фиксированную панель навигации.</p>
+                <div style="height: 800px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom navbar-inverse" role="navigation">
+        <div class="container">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Поиск">
+                </div>
+                <button type="submit" class="btn btn-default">Поиск</button>
+            </form>
+            <p class="navbar-text navbar-right">Вы вошли как
+                <a href="#" class="navbar-link">Иван Иванов</a>
+            </p>
+        </div>
+    </nav>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Stay - Роскошный отель</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #337ab7;
+        }
+        .room-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+        .price-tag {
+            background: #d9534f;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-weight: bold;
+        }
+        .amenity-box {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .amenity-icon {
+            font-size: 2.5em;
+            color: #337ab7;
+            margin-bottom: 15px;
+        }
+        .testimonial {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #337ab7;
+            margin-bottom: 20px;
+        }
+        .stats-box {
+            text-align: center;
+            padding: 30px 15px;
+            background: #2c3e50;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+        .booking-form {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Навигация</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Royal Stay</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#rooms">Номера</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#booking" class="btn btn-primary" style="margin-top: 8px; margin-left: 10px;">Забронировать</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главный баннер -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1>Добро пожаловать в Royal Stay</h1>
+                    <p class="lead">Роскошный отдых в самом сердце города. Незабываемые впечатления и безупречный сервис.</p>
+<div class="btn-group">
+                        <a href="#booking" class="btn btn-primary btn-lg">Забронировать номер</a>
+                        <a href="#rooms" class="btn btn-default btn-lg">Наши номера</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <div class="container-fluid" style="background: #34495e; color: white; padding: 40px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-box">
+                        <div class="stat-number">150+</div>
+                        <p>Номеров</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-box">
+                        <div class="stat-number">24/7</div>
+                        <p>Обслуживание</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-box">
+                        <div class="stat-number">98%</div>
+                        <p>Довольных гостей</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="stats-box">
+                        <div class="stat-number">15</div>
+                        <p>Лет опыта</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- О нас -->
+    <section id="about" class="container" style="padding: 80px 0;">
+        <h2 class="section-title">О нашем отеле</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">Royal Stay - это сочетание современного комфорта и классической элегантности.</p>
+                <p>Мы предлагаем непревзойденный уровень сервиса и внимания к деталям. Наша гостиница расположена в самом центре города, в шаговой доступности от основных достопримечательностей.</p>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li><span class="glyphicon glyphicon-ok text-success"></span> Бесплатный Wi-Fi</li>
+                            <li><span class="glyphicon glyphicon-ok text-success"></span> Фитнес-центр</li>
+                            <li><span class="glyphicon glyphicon-ok text-success"></span> СПА-салон</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li><span class="glyphicon glyphicon-ok text-success"></span> Ресторан</li>
+                            <li><span class="glyphicon glyphicon-ok text-success"></span> Бассейн</li>
+                            <li><span class="glyphicon glyphicon-ok text-success"></span> Конференц-залы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Отель" class="img-responsive img-thumbnail">
+            </div>
+        </div>
+    </section>
+
+    <!-- Номера -->
+    <section id="rooms" style="background: #f8f9fa; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Наши номера</h2>
+            <div class="row">
+                <!-- Стандартный номер -->
+                <div class="col-md-4">
+                    <div class="thumbnail room-card">
+                        <div class="caption">
+                            <span class="price-tag">4 500₽</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Стандартный номер" class="img-responsive">
+<div class="caption">
+                            <h3>Стандартный номер</h3>
+                            <p>Уютный номер с всем необходимым для комфортного проживания.</p>
+                            <ul class="list-unstyled">
+                                <li><span class="glyphicon glyphicon-ok"></span> Площадь: 25 м²</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Двуспальная кровать</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Кондиционер</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Smart TV</li>
+                            </ul>
+                            <p><a href="#booking" class="btn btn-primary btn-block">Забронировать</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Комфорт номер -->
+                <div class="col-md-4">
+                    <div class="thumbnail room-card">
+                        <div class="caption">
+                            <span class="price-tag">7 800₽</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Комфорт номер" class="img-responsive">
+                        <div class="caption">
+                            <h3>Комфорт номер</h3>
+                            <p>Просторный номер с гостиной зоной и улучшенным видом.</p>
+                            <ul class="list-unstyled">
+                                <li><span class="glyphicon glyphicon-ok"></span> Площадь: 35 м²</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Отдельная гостиная</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Мини-бар</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Вид на город</li>
+                            </ul>
+                            <p><a href="#booking" class="btn btn-primary btn-block">Забронировать</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Люкс номер -->
+                <div class="col-md-4">
+                    <div class="thumbnail room-card">
+                        <div class="caption">
+                            <span class="price-tag">12 900₽</span>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Люкс номер" class="img-responsive">
+                        <div class="caption">
+                            <h3>Президентский люкс</h3>
+                            <p>Эксклюзивный номер с панорамным видом и персональным обслуживанием.</p>
+                            <ul class="list-unstyled">
+                                <li><span class="glyphicon glyphicon-ok"></span> Площадь: 80 м²</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Отдельная терраса</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Гидромассажная ванна</li>
+                                <li><span class="glyphicon glyphicon-ok"></span> Персональный дворецкий</li>
+                            </ul>
+                            <p><a href="#booking" class="btn btn-primary btn-block">Забронировать</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="container" style="padding: 80px 0;">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="amenity-box">
+                    <div class="amenity-icon">
+                        <span class="glyphicon glyphicon-cutlery"></span>
+                    </div>
+<h4>Ресторан</h4>
+                    <p>Гурманская кухня от нашего шеф-повара с использованием местных продуктов.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="amenity-box">
+                    <div class="amenity-icon">
+                        <span class="glyphicon glyphicon-tint"></span>
+                    </div>
+                    <h4>SPA-центр</h4>
+                    <p>Расслабляющие процедуры, массажи и уходовые программы для полного релакса.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="amenity-box">
+                    <div class="amenity-icon">
+                        <span class="glyphicon glyphicon-heart"></span>
+                    </div>
+                    <h4>Фитнес-зал</h4>
+                    <p>Современное оборудование, персональные тренировки и групповые занятия.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="amenity-box">
+                    <div class="amenity-icon">
+                        <span class="glyphicon glyphicon-briefcase"></span>
+                    </div>
+                    <h4>Бизнес-центр</h4>
+                    <p>Полностью оборудованные конференц-залы и переговорные комнаты.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бронирование -->
+    <section id="booking" style="background: #337ab7; color: white; padding: 80px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Специальные предложения</h2>
+                    <p class="lead">Забронируйте заранее и получите скидку до 20%!</p>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>Раннее бронирование: -15%</h4>
+                            <p>При бронировании за 30 дней до заезда</p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h4>Длительное проживание: -20%</h4>
+                            <p>При бронировании от 7 ночей</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="booking-form">
+                        <h3 style="color: #333; margin-top: 0;">Форма бронирования</h3>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="checkin" style="color: #333;">Дата заезда</label>
+                                <input type="date" class="form-control" id="checkin">
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout" style="color: #333;">Дата выезда</label>
+                                <input type="date" class="form-control" id="checkout">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="adults" style="color: #333;">Взрослые</label>
+                                        <select class="form-control" id="adults">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+<label for="children" style="color: #333;">Дети</label>
+                                        <select class="form-control" id="children">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="roomType" style="color: #333;">Тип номера</label>
+                                <select class="form-control" id="roomType">
+                                    <option>Стандарт</option>
+                                    <option>Комфорт</option>
+                                    <option>Люкс</option>
+                                    <option>Президентский люкс</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Проверить доступность</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Отзывы наших гостей</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Прекрасный отель с отличным сервисом. Номер был чистым и комфортным, персонал очень внимательный."</p>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="https://i.pravatar.cc/60?img=1" alt="Гость" class="media-object img-circle">
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">Анна Иванова</h5>
+                                <small>Бизнес-поездка</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Отдыхали семьей с детьми. Детям очень понравился бассейн, а нам - спа-процедуры. Обязательно вернемся!"</p>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="https://i.pravatar.cc/60?img=2" alt="Гость" class="media-object img-circle">
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">Семен Петров</h5>
+                                <small>Семейный отдых</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p>"Идеальное место для романтического уикенда. Президентский люкс превзошел все ожидания!"</p>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="https://i.pravatar.cc/60?img=3" alt="Гость" class="media-object img-circle">
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">Мария Сидорова</h5>
+                                <small>Романтический отдых</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="container" style="padding: 80px 0;">
+        <h2 class="section-title">Контакты</h2>
+        <div class="row">
+    </script>
+</body>
+</html>

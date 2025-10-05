@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Практическое задание 5.4 Работа с миниатюрами</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-2">
+                <a href="#" class="thumbnail">
+                    <img src="https://via.placeholder.com/135x180" alt="..." width="135" height="180">
+                </a>
+            </div>
+            
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/250x150" alt="...">
+                    <div class="caption">
+                        <h4>Название изображения</h4>
+                        <p>Описание изображения. Синий прямоугольник размером 193 на 200 пикселей.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Кнопка "Да"</a>
+                            <a href="#" class="btn btn-default" role="button">Кнопка "Нет"</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="https://via.placeholder.com/250x150/ff6b6b" alt="...">
+                    <div class="caption">
+                        <h4>Вторая миниатюра</h4>
+                        <p>Еще одно описание изображения с дополнительной информацией.</p>
+                        <p>
+                            <a href="#" class="btn btn-success" role="button">Принять</a>
+                            <a href="#" class="btn btn-danger" role="button">Отклонить</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
